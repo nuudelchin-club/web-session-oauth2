@@ -1,10 +1,15 @@
 package nuudelchin.club.web.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.apache.ibatis.annotations.Mapper;
 
 import nuudelchin.club.web.entity.UserEntity;
 
-public interface UserRepository extends JpaRepository<UserEntity, String> {
-
-    UserEntity findByUsername(String username);
+@Mapper
+public interface UserRepository {
+	
+	UserEntity findByUsername(String username);
+	
+	int save(UserEntity userEntity);
+	
+	int update(UserEntity userEntity);
 }

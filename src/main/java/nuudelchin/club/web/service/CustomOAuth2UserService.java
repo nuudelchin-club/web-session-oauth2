@@ -94,10 +94,12 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
         }
         else {
         	
+        	userEntity.setUsername(username);
+        	userEntity.setFullname(fullname);
         	userEntity.setEmail(email);
             userEntity.setPicture(pictureBytes);
             
-            userRepository.save(userEntity);
+            userRepository.update(userEntity);
         }
         
         return new CustomOAuth2User(oAuth2Response, role);

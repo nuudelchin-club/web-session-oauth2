@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Spring Security Session</title>
+	</head>
+	<body>
+		main page
+		<hr>
+		<p>
+			<span>Сайн байна уу?</span> 
+			<br> 
+			<span th:text="${fullname}"></span> 
+			<br> 
+			<span th:text="${role}"></span> 
+			<br> 
+			<span th:text="${email}"></span>
+		</p>
+		<div>
+	        <img th:src="${picture}" style="width: 150px; height: 150px; border-radius: 50%;">
+	    </div>
+	</body>
+</html>

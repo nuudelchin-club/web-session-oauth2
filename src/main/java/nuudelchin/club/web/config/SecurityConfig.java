@@ -30,11 +30,12 @@ public class SecurityConfig {
         
         http
         	.oauth2Login((oauth2) -> oauth2
+    			.loginPage("/login")
                 .userInfoEndpoint((userInfoEndpointConfig) -> userInfoEndpointConfig
                         .userService(customOAuth2UserService)));
 
         http.authorizeHttpRequests((auth) -> auth
-        		.requestMatchers("/", "privacy-policy", "term-of-service", "userdata-deletion").permitAll()
+        		.requestMatchers("/", "privacy-policy", "term-of-service", "userdata-deletion", "/oauth2/**", "/login/**").permitAll()
         		.anyRequest().authenticated());
         
         //http.sessionManagement((auth) -> auth

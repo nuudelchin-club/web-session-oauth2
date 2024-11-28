@@ -1,7 +1,7 @@
 spring.application.name=session-oauth2
 
 spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
-spring.datasource.url=jdbc:mariadb://192.168.219.12:3306/session-oauth2?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
+spring.datasource.url=
 spring.datasource.username=
 spring.datasource.password=
 
@@ -17,8 +17,8 @@ server.servlet.session.timeout=60
 spring.security.oauth2.client.registration.google.client-name=google
 spring.security.oauth2.client.registration.google.client-id=
 spring.security.oauth2.client.registration.google.client-secret=
-#spring.security.oauth2.client.registration.google.redirect-uri=https://www.nuudelchin.club/login/oauth2/code/google
-spring.security.oauth2.client.registration.google.redirect-uri=https://localhost/login/oauth2/code/google
+#spring.security.oauth2.client.registration.google.redirect-uri=
+spring.security.oauth2.client.registration.google.redirect-uri=
 spring.security.oauth2.client.registration.google.authorization-grant-type=authorization_code
 spring.security.oauth2.client.registration.google.scope=profile,email
 
@@ -26,8 +26,8 @@ spring.security.oauth2.client.registration.google.scope=profile,email
 spring.security.oauth2.client.registration.facebook.client-name=facebook
 spring.security.oauth2.client.registration.facebook.client-id=
 spring.security.oauth2.client.registration.facebook.client-secret=
-#spring.security.oauth2.client.registration.facebook.redirect-uri=https://www.nuudelchin.club/login/oauth2/code/facebook
-spring.security.oauth2.client.registration.facebook.redirect-uri=https://localhost/login/oauth2/code/facebook
+#spring.security.oauth2.client.registration.facebook.redirect-uri=
+spring.security.oauth2.client.registration.facebook.redirect-uri=
 spring.security.oauth2.client.registration.facebook.authorization-grant-type=authorization_code
 spring.security.oauth2.client.registration.facebook.scope=public_profile,email
 
@@ -35,7 +35,7 @@ spring.security.oauth2.client.registration.facebook.scope=public_profile,email
 spring.security.oauth2.client.registration.twitter.client-name=twitter
 spring.security.oauth2.client.registration.twitter.client-id=
 spring.security.oauth2.client.registration.twitter.client-secret=
-spring.security.oauth2.client.registration.twitter.redirect-uri=https://www.nuudelchin.club/login/oauth2/code/twitter
+spring.security.oauth2.client.registration.twitter.redirect-uri=
 spring.security.oauth2.client.registration.twitter.authorization-grant-type=authorization_code
 spring.security.oauth2.client.registration.twitter.scope=read
 
@@ -48,7 +48,7 @@ spring.security.oauth2.client.provider.twitter.user-name-attribute=id
 spring.security.oauth2.client.registration.kakao.client-name=kakao
 spring.security.oauth2.client.registration.kakao.client-id=
 spring.security.oauth2.client.registration.kakao.client-secret=
-spring.security.oauth2.client.registration.kakao.redirect-uri=https://localhost/login/oauth2/code/kakao
+spring.security.oauth2.client.registration.kakao.redirect-uri=
 spring.security.oauth2.client.registration.kakao.authorization-grant-type=authorization_code
 spring.security.oauth2.client.registration.kakao.scope=profile_nickname
 
@@ -61,7 +61,7 @@ spring.security.oauth2.client.provider.kakao.user-name-attribute=response
 spring.security.oauth2.client.registration.naver.client-name=naver
 spring.security.oauth2.client.registration.naver.client-id=
 spring.security.oauth2.client.registration.naver.client-secret=
-spring.security.oauth2.client.registration.naver.redirect-uri=https://localhost/login/oauth2/code/naver
+spring.security.oauth2.client.registration.naver.redirect-uri=
 spring.security.oauth2.client.registration.naver.authorization-grant-type=authorization_code
 spring.security.oauth2.client.registration.naver.scope=name,email
 
@@ -72,7 +72,19 @@ spring.security.oauth2.client.provider.naver.user-name-attribute=response
 
 #server.port = 80
 server.port = 443
-server.ssl.key-store=classpath:keystore.p12
+server.ssl.key-store=
 server.ssl.key-store-password=
-server.ssl.key-store-type=PKCS12
-server.ssl.key-alias=letsencrypt
+server.ssl.key-store-type=
+server.ssl.key-alias=
+
+google.client-id=
+google.client-secret=
+google.redirect-uri=
+
+facebook.client-id=
+facebook.client-secret=
+facebook.redirect-uri=
+
+naver.client-id=
+naver.client-secret=
+naver.redirect-uri=

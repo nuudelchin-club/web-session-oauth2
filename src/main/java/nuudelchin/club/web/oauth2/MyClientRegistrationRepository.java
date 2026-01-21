@@ -5,11 +5,11 @@ import org.springframework.security.oauth2.client.registration.ClientRegistratio
 import org.springframework.security.oauth2.client.registration.InMemoryClientRegistrationRepository;
 
 @Configuration
-public class CustomClientRegistrationRepository {
+public class MyClientRegistrationRepository {
 
 	private final SocialClientRegistration socialClientRegistration;
 	
-	public CustomClientRegistrationRepository(SocialClientRegistration socialClientRegistration) {
+	public MyClientRegistrationRepository(SocialClientRegistration socialClientRegistration) {
 
         this.socialClientRegistration = socialClientRegistration;
     }

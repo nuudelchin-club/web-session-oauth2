@@ -4,16 +4,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import nuudelchin.club.web.entity.UserEntity;
-import nuudelchin.club.web.repository.UserRepository;
+import nuudelchin.club.web.mapper.UserMapper;
 
 @Service
 public class MainService {
 
     @Autowired
-    private UserRepository userRepository;
+    private UserMapper userMapper;
 
-    public UserEntity findByUsername(String username) {
+    public UserEntity selectByUsername(String username) {
 
-    	return userRepository.findByUsername(username);
+    	return userMapper.selectByUsername(username);
     }
 }

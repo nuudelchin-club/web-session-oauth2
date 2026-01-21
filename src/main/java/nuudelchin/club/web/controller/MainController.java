@@ -28,7 +28,7 @@ public class MainController {
 		
 		String username = authentication.getName();
 		
-		UserEntity userEntity = mainService.findByUsername(username);
+		UserEntity userEntity = mainService.selectByUsername(username);
 		
 		if(userEntity != null) {
 			
